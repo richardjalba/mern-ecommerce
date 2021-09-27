@@ -35,3 +35,11 @@ I switch out the 'a' tags for LinkContainer tags in the Navbar. And I switch out
 Note: LinkContainer is used for bootstrap components.
 
 By using the Link and LinkContainer tags, we're skipping the reloads you'd typically experience with 'a' tags.
+
+Now I'm building out the ProductScreen. Where I run into two issues:
+
+1. I keep getting an error instead of a product page on the client side. The solution is to import BrowserRouter from react-router-dom.
+
+2. My bootstrap skills need work. I'm much more used to CSS/SCSS. I figure out to add attribute 'fluid' to prevent the image from spilling out of its container.
+
+Put in some logic that determines whether the Add to Cart button is enabled or disabled.
