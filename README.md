@@ -81,3 +81,11 @@ Then I get the ProductScreen hooked up with useState and useEffect, and bring in
 The code for the hooks in ProductScreen are the same as HomeScreen. Except instead of products, it is product, and the get request is changed to include the id that's given in the URL.
 
 Once that works, I delete the original dummy data in the frontend. Leaving the dummy data in the backend folder. Which will be removed after a database is implemented.
+
+**nodemon** and **concurrently** are used for development so I don't have to repeatedly restart my server for any code changes I make AND so I can have both frontend and backend run at the same time. I change the scripts in the JSON file to best utilize these tools.
+
+**dotenv** allows us to set up environment variables. I change a few things is server.js to connect to my .env file.
+
+Now I want to change the Vanilla JS syntax to ES import syntax. I do this by adding "type": "module" to my package.json.
+
+This leads to an error in the products.js dummy data, which is fixed by changing the export syntax.
