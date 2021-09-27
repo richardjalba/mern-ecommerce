@@ -1,0 +1,22 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "This ecommerce web app demonstrates my ability using the MERN stack.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardjalba/mern-ecommerce.git"
+  },
+  "author": "Richard Alba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardjalba/mern-ecommerce/issues"
+  },
+  "homepage": "https://github.com/richardjalba/mern-ecommerce#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
