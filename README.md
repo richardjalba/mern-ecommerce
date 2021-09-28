@@ -103,3 +103,7 @@ In the backend folder, I create the config folder to hold the db.js file. Which 
 Then I bring this in server.js as connectDB. Initially, I ran into an issue because I forget the .js since the backend folder is using node.
 
 **colors** is used on the developer side to make things easier to see in the console. I'm using this package so it's easier for me to see whether my connection to mongo is working or not.
+
+I create a models folder for orderModel, productModel, and userModel. Within each file, I use mongoose to create schemas as objects that contain all the fields per model.
+
+I also throw in the Review schema within the productModel.js file since it seemed appropriate.
