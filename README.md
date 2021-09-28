@@ -2,7 +2,7 @@
 
 This ecommerce web app demonstrates my ability using the MERN stack.
 
-Here is where I will document my efforts in building this ecommerce app.
+**Here is where I will document my efforts in building this ecommerce app.**
 
 First I create the Header and Footer components to bring into the App. I'll also be using bootswatch for a free bootstrap theme.
 
@@ -89,3 +89,17 @@ Once that works, I delete the original dummy data in the frontend. Leaving the d
 Now I want to change the Vanilla JS syntax to ES import syntax. I do this by adding "type": "module" to my package.json.
 
 This leads to an error in the products.js dummy data, which is fixed by changing the export syntax.
+
+**MongoDB** is a NoSQL database that utilizes JSON. Every "document" is given automatically given an \_id property.
+
+MongoDB will let us create a collection for users, orders, and products.
+
+I get my cluster set up and put the URI and other pertinent info in the .env file.
+
+**mongoose** allows us to create models and schema in our MongoDb database. Object modeling.
+
+In the backend folder, I create the config folder to hold the db.js file. Which contains an asynchronous function since dealing with MongoDB via .connect, .find, .create, will return promises.
+
+Then I bring this in server.js as connectDB. Initially, I ran into an issue because I forget the .js since the backend folder is using node.
+
+**colors** is used on the developer side to make things easier to see in the console. I'm using this package so it's easier for me to see whether my connection to mongo is working or not.
