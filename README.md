@@ -131,3 +131,19 @@ I create the routes folder with productRoutes.js inside of it. Then I move the p
 After tweaking server.js, I bring in the Product model into productRoutes.js and build out the file.
 
 **express-async-handler** is a middleware that handles exceptions inside async express routes and passes them to your express error handlers.
+
+This package is applied by wrapping the route async function with the alias given, asyncHandler.
+
+I jump onto my Postman app to play around with my APIs to see that everything is working.
+
+Since I don't want the default error handler when the URL :id isn't recognized, since it's HTML, I create a custom middleware error handler that serves JSON instead of the default HTML.
+
+In errorMiddleware.js, to overwrite the default error handler, I need to use the following syntax (err, req, res, next). The 'next' is always needed for middleware, but the 'err' is specific to overriding the default error handler.
+
+I go back to Postman to play with GETting an invalid :id to see if my middleware is working. It is, after I import my middleware fx's to server.js.
+
+I do the same with invalid routes (ex. /api/chickenteriyaki) so a Not Found error is served.
+
+At this point, the backend and frontend are communicating properly. The main issue is that this is on a component-level.
+
+Now I need to bring in redux so I can bring things like products, users, and orders on a global level.
