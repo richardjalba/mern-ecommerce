@@ -147,3 +147,17 @@ I do the same with invalid routes (ex. /api/chickenteriyaki) so a Not Found erro
 At this point, the backend and frontend are communicating properly. The main issue is that this is on a component-level.
 
 Now I need to bring in redux so I can bring things like products, users, and orders on a global level.
+
+Here is the best YouTube video I can find that describes how Redux works: https://www.youtube.com/watch?v=np8A_aW7Pew
+
+(That video is more for my own reference.)
+
+**redux** is state manager.
+
+**react-redux** gets redux to work with react.
+
+**redux-thunk** lets us make async requests within action creators; middleware.
+
+**redux-devtools-extension** lets me use the chrometool to observe redux state management.
+
+I create the store.js file and put each of these packages into use to connect my Reducers and related middleware.
