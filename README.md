@@ -107,3 +107,21 @@ Then I bring this in server.js as connectDB. Initially, I ran into an issue beca
 I create a models folder for orderModel, productModel, and userModel. Within each file, I use mongoose to create schemas as objects that contain all the fields per model.
 
 I also throw in the Review schema within the productModel.js file since it seemed appropriate.
+
+Now I modify the dummy products data and get rid of the \_id field since I want to see MongoDB add that automatically when I send it the data.
+
+I also create some dummy user data, where I create an admin user and I need to hash the passwords.
+
+**bcryptjs** is used to hash passwords for added security.
+
+At this point, I got frustrated that my products were no longer appearing on their ProductScreen. Eventually I realize this is because I removed the \_id fields in the dummy data.
+
+I create a standalone seeder.js file that takes in mongoose and env. It also takes in the Models files and dummy data files.
+
+This seeder.js file will clear data that's already in the database, then it will insert the data I have in the products.js and users.js files, which are dummy data. The Admin user is assigned to the inserted products.
+
+I also put in a function to simply destroy all data in case I'm feeling cheeky.
+
+I give both the import and destroy functions their own scripts in the package.json file.
+
+I resist using the destroy script when my Mongo Compass app doesn't pick up the data I supposedly seeded. Turns out I needed to click Reload Data in the Compass app. So everything was actually working fine.
