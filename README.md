@@ -124,4 +124,10 @@ I also put in a function to simply destroy all data in case I'm feeling cheeky.
 
 I give both the import and destroy functions their own scripts in the package.json file.
 
-I resist using the destroy script when my Mongo Compass app doesn't pick up the data I supposedly seeded. Turns out I needed to click Reload Data in the Compass app. So everything was actually working fine.
+I repeatedly use the destroy and import scripts when my Mongo Compass app doesn't pick up the data I supposedly seeded. Turns out I needed to click Reload Data in the Compass app. So everything was actually working fine.
+
+I create the routes folder with productRoutes.js inside of it. Then I move the product routes from the server.js file to the productRoutes.js file.
+
+After tweaking server.js, I bring in the Product model into productRoutes.js and build out the file.
+
+**express-async-handler** is a middleware that handles exceptions inside async express routes and passes them to your express error handlers.
