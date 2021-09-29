@@ -181,3 +181,5 @@ Back in HomeScreen.js we can remove the component state, since we're moving our 
 This means we're clearing the useEffect and utilizing the productList action inside it instead, after bringing in the action file into HomeScreen.
 
 We're also bringing in the useDispatch and useSelector functions from react-redux. Which we'll use hooks to bring in useDispatch for use in useEffect, and useSelector for us to select the state we want.
+
+To break things up and at some flavor, I create a Loader and Message component. So whenever the state is loading during a fetch request, we'll get a bootstrap animation until the request is a success, or a message if the request fails.
