@@ -183,3 +183,7 @@ This means we're clearing the useEffect and utilizing the productList action ins
 We're also bringing in the useDispatch and useSelector functions from react-redux. Which we'll use hooks to bring in useDispatch for use in useEffect, and useSelector for us to select the state we want.
 
 To break things up and at some flavor, I create a Loader and Message component. So whenever the state is loading during a fetch request, we'll get a bootstrap animation until the request is a success, or a message if the request fails.
+
+Now that we've got the products on a global level, we need to move the product descriptions from the component-level to the global level too.
+
+This is essentially a repeat of what I've already written, albeit singular items and into the ProductScreen component: 1) Make constants for product details. 2) Make product details reducer. 3) Add the reducer to store.js. 4) Make listProductDetails action 5) bring all these into the ProductScreen
