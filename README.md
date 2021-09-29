@@ -187,3 +187,9 @@ To break things up and at some flavor, I create a Loader and Message component. 
 Now that we've got the products on a global level, we need to move the product descriptions from the component-level to the global level too.
 
 This is essentially a repeat of what I've already written, albeit singular items and into the ProductScreen component: 1) Make constants for product details. 2) Make product details reducer. 3) Add the reducer to store.js. 4) Make listProductDetails action 5) bring all these into the ProductScreen
+
+Now I want to add quantity to the ProductScreen, so I set the state for quantity. Then I set a ListGroup.Item to appear if the stock is more than 0.
+
+Then I give the Add to Cart button an onClick addToCartHandler. Which adds to cart the quantity selected on the ProductScreen. While also taking the user to the CartScreen.
+
+Then I build out the CartScreen and bring the route into App.js.
