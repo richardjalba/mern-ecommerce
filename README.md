@@ -161,3 +161,23 @@ Here is the best YouTube video I can find that describes how Redux works: https:
 **redux-devtools-extension** lets me use the chrometool to observe redux state management.
 
 I create the store.js file and put each of these packages into use to connect my Reducers and related middleware.
+
+In index.js, I import store.js and Provider from redux.
+
+Then I create productListReducer in the productReducers, so I have a case for REQUEST, SUCCESS, FAILURE.
+
+I also create a constants folder with a productConstants file, which I build out and bring into productReducers.js.
+
+Then I create an actions folder with productActions.js. Where I bring in the productConstants.
+
+Do you remember how we hav useEffect to fetch the products data in the HomeScreen component? Now we're gonna move that functionality into the productActions.js file.
+
+I do this by bringing in axios, using a "double arrow" syntax for thunk, and dispatching the REQUEST Constant which is already tied to trigger its given Reducer, followed by an axios request, followed by dispatching SUCCESS, which serves a payload that gets passed down to the state.
+
+If something goes wrong, we instead dispatch FAILURE to serve the payload with an error message.
+
+Back in HomeScreen.js we can remove the component state, since we're moving our resources (products, users, orders) to global data via redux.
+
+This means we're clearing the useEffect and utilizing the productList action inside it instead, after bringing in the action file into HomeScreen.
+
+We're also bringing in the useDispatch and useSelector functions from react-redux. Which we'll use hooks to bring in useDispatch for use in useEffect, and useSelector for us to select the state we want.
