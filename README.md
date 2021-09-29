@@ -193,3 +193,7 @@ Now I want to add quantity to the ProductScreen, so I set the state for quantity
 Then I give the Add to Cart button an onClick addToCartHandler. Which adds to cart the quantity selected on the ProductScreen. While also taking the user to the CartScreen.
 
 Then I build out the CartScreen and bring the route into App.js.
+
+Now I work on Cart functionality by building out the respective Constant, Reducer, Action. Bring this into the store.js file.
+
+Note: The cart is saved to local storage in JSON format.
