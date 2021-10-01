@@ -213,3 +213,9 @@ In the userController file I create an authUser function to pull the email and p
 Back in userRoutes file, I put in a route with a POST request that triggers the authUser function.
 
 Then I mount this into the server.js file as app.use('/api/users', userRoutes).
+
+**jsonwebtoken** is made of a header, payload, and signature verification. All this can tell whether the user is who they say they are and can authorize for any private routes.
+
+I create a utils folder with a generateToken.js file. I import the jsonwebtoken passage and create the generateToken function that takes in an id as the payload for the token. So I sign(id), followed by the secret, which I put in my .env, then follow the secret with an expiration of 30 days.
+
+Back in the userController, every time a user logs in (which is a POST request), the backend will send back the users information along with a generated webtoken that contains the user's \_id as the payload.
