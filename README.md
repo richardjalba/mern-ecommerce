@@ -196,4 +196,20 @@ Then I build out the CartScreen and bring the route into App.js.
 
 Now I work on Cart functionality by building out the respective Constant, Reducer, Action. Bring this into the store.js file.
 
-Note: The cart is saved to local storage in JSON format.
+Note: The cart is saved to local storage in JSON format. This way I can bring it into the store.js file.
+
+To clean things up a bit, I simply move the functionality from productRoutes.js to productController.js.
+
+Now productRoutes.js only has the routes and the functions that are imported from productController.js.
+
+I build out the userModel (somewhat based on the productModel) and the userController.
+
+The userController will authorize the user and collect a token.
+
+Added express.json to serverjs. That way I can access req.body.email and req.body.password in the userController file.
+
+In the userController file I create an authUser function to pull the email and password from the frontend and POST it to the backend.
+
+Back in userRoutes file, I put in a route with a POST request that triggers the authUser function.
+
+Then I mount this into the server.js file as app.use('/api/users', userRoutes).
