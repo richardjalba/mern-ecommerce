@@ -219,3 +219,21 @@ Then I mount this into the server.js file as app.use('/api/users', userRoutes).
 I create a utils folder with a generateToken.js file. I import the jsonwebtoken passage and create the generateToken function that takes in an id as the payload for the token. So I sign(id), followed by the secret, which I put in my .env, then follow the secret with an expiration of 30 days.
 
 Back in the userController, every time a user logs in (which is a POST request), the backend will send back the users information along with a generated webtoken that contains the user's \_id as the payload.
+
+Now I'm creating middleware to use the token to access protected routes; user profile, orderhistory, etc. I import jwt and userModel. The function is called protect.
+
+In the userController, I create a GET request function to get the user's profile (a private route). And I also bring this into the userRoute file, where I include the protect middleware function in the profile get request.
+
+In userController, I build out a function to register a new user. Then I import this into userRoutes and add the POST request route to the home route '/'.
+
+Now, back in the front-end.
+
+I start off my creating a userConstants file for logout and login requests, success, and failure. Then I create the userReducers file where I build out userLoginReducer; which I bring into store.js.
+
+Then I create the userActions file that I build out the login function for.
+
+Login takes in an email and password. Then it can dispatch USER_LOGIN_REQUEST along with config, which attaches a token to the header. Then it will post onto the login api, along with the given email, password, and the config. Then USER_LOGIN_SUCCESS while saving the data to local storage.
+
+The catch errors will all pretty much be the same across the app.
+
+Back in store.js I create userInfoFromStorage to pull the users data from the local storage. And add userLogin to initialState.
