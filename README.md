@@ -237,3 +237,5 @@ Login takes in an email and password. Then it can dispatch USER_LOGIN_REQUEST al
 The catch errors will all pretty much be the same across the app.
 
 Back in store.js I create userInfoFromStorage to pull the users data from the local storage. And add userLogin to initialState.
+
+Now I create the LoginScreen and FormContainer components. After I build those out, I add the route to the LoginScreen in the App.js file.
