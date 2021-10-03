@@ -239,3 +239,5 @@ The catch errors will all pretty much be the same across the app.
 Back in store.js I create userInfoFromStorage to pull the users data from the local storage. And add userLogin to initialState.
 
 Now I create the LoginScreen and FormContainer components. After I build those out, I add the route to the LoginScreen in the App.js file.
+
+I modify the Header so if the localStorage has the userInfo, the Sign In text will change to the user's name and a dropdown will give the user access to their profile and a logout link.
