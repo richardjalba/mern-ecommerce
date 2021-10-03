@@ -249,3 +249,17 @@ Then I create a logout action in userActions.
 I create userRegisterReducer in userReducers. Then I add it to the store.js file. Next I add register to userActions. This is very similar to login.
 
 Aftwerwards I build out the RegisterScreen. Which is similar to LoginScreen. Except there are more redux useState hooks and (now including name, confirmPassword, message). Along with a few other changes in the form and message.
+
+Now I want to get the backend setup so I can create a ProfileScreen in the frontend.
+
+So I'll start at the userController and create a POST to updateUserProfile (name, email, password).
+
+Then inside the userRoutes file, I add a .put to the/profile route.
+
+Afterwards I go on postman to make sure these API's are working properly. I couldn't get it to work at first because I forgot about my protect middleware. Everything is working fine.
+
+I go to userConstants and userReducers for USER\__DETAILS_-----. Then I add the reducer to the store.js file. Next I add getUserDetails to userActions.
+
+In the Screens folder I create the ProfileScreen file to build out. Much of the logic is based on the ProfileScreen, but with some changes. The JSX is similar except with profile info on the left and orders on the right side of the screen.
+
+Then in app.js I add a route for the profileScreen. And I add the user update constants in the userConstants file, followed by adding userUpdateProfileReducer to userReducers.js and updateUserProfile to userActions.
