@@ -241,3 +241,11 @@ Back in store.js I create userInfoFromStorage to pull the users data from the lo
 Now I create the LoginScreen and FormContainer components. After I build those out, I add the route to the LoginScreen in the App.js file.
 
 I modify the Header so if the localStorage has the userInfo, the Sign In text will change to the user's name and a dropdown will give the user access to their profile and a logout link.
+
+Then I create a logout action in userActions.
+
+...
+
+I create userRegisterReducer in userReducers. Then I add it to the store.js file. Next I add register to userActions. This is very similar to login.
+
+Aftwerwards I build out the RegisterScreen. Which is similar to LoginScreen. Except there are more redux useState hooks and (now including name, confirmPassword, message). Along with a few other changes in the form and message.
