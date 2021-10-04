@@ -275,3 +275,7 @@ Then I modify the code in shippingScreen to pull out shipping address data in th
 Now I created CheckoutSteps component for breadcrumbs through the purchase process. Which I bring into the shippingScreen and into App.js as a route.
 
 Next I create and build out the PaymentScreen. Where I use paymentMethod for setState. In the cartConstants, I put in CART_SAVE_PAYMENT_METHOD. Which is brought into cartActions as a function savePaymentMethod; and also saves data to localStorage.
+
+Now I create and build out the PlaceOrderScreen, which takes in the cart state. In the backend, I make an orderController that uses a POST request, as well as orderRoutes.
+
+Back in the frontend, we want to be able to place an order. So I create orderConstants, orderReducers, and orderActions. Then I modify the PlaceOrderScreen.
