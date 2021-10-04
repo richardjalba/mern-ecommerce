@@ -271,3 +271,7 @@ To start off, I create the ShippingScreen and give it a route in App.js. In cart
 In store.js I create the function shippingAddressFromStorage since this data will need to be stored in the localStorage.
 
 Then I modify the code in shippingScreen to pull out shipping address data in the local storage to fill in the appropriate fields.
+
+Now I created CheckoutSteps component for breadcrumbs through the purchase process. Which I bring into the shippingScreen and into App.js as a route.
+
+Next I create and build out the PaymentScreen. Where I use paymentMethod for setState. In the cartConstants, I put in CART_SAVE_PAYMENT_METHOD. Which is brought into cartActions as a function savePaymentMethod; and also saves data to localStorage.
