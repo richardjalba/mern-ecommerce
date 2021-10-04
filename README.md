@@ -263,3 +263,11 @@ I go to userConstants and userReducers for USER\__DETAILS_-----. Then I add the 
 In the Screens folder I create the ProfileScreen file to build out. Much of the logic is based on the ProfileScreen, but with some changes. The JSX is similar except with profile info on the left and orders on the right side of the screen.
 
 Then in app.js I add a route for the profileScreen. And I add the user update constants in the userConstants file, followed by adding userUpdateProfileReducer to userReducers.js and updateUserProfile to userActions.
+
+As of now, if I'm in the checkout process and I click next for shipping, I get taken to the loginScreen which you can see has a redirect to shipping in the redirect on sign-in.
+
+To start off, I create the ShippingScreen and give it a route in App.js. In cartActions I create saveShippingAddress along with it's partnering reducer in cartReducers.
+
+In store.js I create the function shippingAddressFromStorage since this data will need to be stored in the localStorage.
+
+Then I modify the code in shippingScreen to pull out shipping address data in the local storage to fill in the appropriate fields.
