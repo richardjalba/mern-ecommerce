@@ -279,3 +279,13 @@ Next I create and build out the PaymentScreen. Where I use paymentMethod for set
 Now I create and build out the PlaceOrderScreen, which takes in the cart state. In the backend, I make an orderController that uses a POST request, as well as orderRoutes.
 
 Back in the frontend, we want to be able to place an order. So I create orderConstants, orderReducers, and orderActions. Then I modify the PlaceOrderScreen.
+
+Now I'm going to work on the OrderScreen, but first I need to fetch the order from the database. So in OrderController, I create a GET request with an :id via private route. I try the route out on Postman to see if it's working properly - it is.
+
+Now we want to get the order details and bring them into the OrderScreen. So I start by adding the \_DETAILS\_ to the orderConstants. Then I make the orderDetailsReducer in the orderReducers file; which is then added to store.js. Next in the orderActions I create getOrderDetails.
+
+Now we're able to fetch the order and send it through the state, I'll build out the OrderScreen. I used the PlaceOrderScreen as the template and modify it as necessary. Which I then import and make a route for in App.js.
+
+Before bringing in PayPal and using their api, I need to make sure I can get an order to update to being paid in the database.
+
+In the orderController, I add updateOrderToPaid. Then in orderRoutes, I add a route for a PUT request. Then in the frontend, I fix up the order pay CONSTANTS, Action, and Reducer. Which I bring into store.js.
