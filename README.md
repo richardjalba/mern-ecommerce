@@ -326,5 +326,3 @@ Now I want to GET a user to show on screen and UPDATE. So I create getUserById i
 Now I'm creating the UserEditScreen. Based on the RegisterScreen, except with the appropriate logic.
 
 I make a userUpdate constant, reducer, etc, to get the UserEditScreen to actually function.
-
-// Need summary up until "Admin Product List"
