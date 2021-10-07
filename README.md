@@ -2,6 +2,9 @@
 
 This ecommerce web app demonstrates my ability using the MERN stack.
 
+EMAIL: admin@example.com
+PASSWORD: 123456
+
 **Here is where I will document my efforts in building this ecommerce app.**
 
 First I create the Header and Footer components to bring into the App. I'll also be using bootswatch for a free bootstrap theme.
@@ -301,3 +304,27 @@ I create successPaymentHandler in the OrderScreen file... I test out the order p
 Now I want to show the orders on the ProfileScreen. So first I need to go to the orderController to add a GET route to access the orders to the user that is logged in. The route is added to orderRoutes. I test it in Postman - Success.
 
 Then I add this to the Constants, Reducer, Action, bring the action in the ProfileScreen, which I build out even more to show the order information, and call it to bring it onto the state.
+
+Now I'm gonna focus on admin functionality.
+
+In userController, I add a GET request to get all users (getUsers) via private AND admin access. Then I add the route to userRoute. Followed by adding admin to my authMiddleware.
+
+In the userConstant file, add USER\_\_LIST. Add userListReducer to userReducers. In userActions add listUsers.
+
+Now I'm creating UserListScreen where I bring in everything mentioned in the last two paragraphs. Then I add UserListScreen to App.js.
+
+...
+
+Now I'm going to create the delete user functionality. So in userController I make a DELETE api via a private admin route. Then I bring it into the userRoutes and userConstants.
+
+Then create a userDeleteReducer in the userReducers. Followed by adding it to store.js, then adding deleteUser in userActions.
+
+Then this functionality is added to the UserListScreen.
+
+Now I want to GET a user to show on screen and UPDATE. So I create getUserById in the userController. And I create updateUser as a PUT api - this allows change to whether a person is admin. Then I add this put in the userRoutes.
+
+Now I'm creating the UserEditScreen. Based on the RegisterScreen, except with the appropriate logic.
+
+I make a userUpdate constant, reducer, etc, to get the UserEditScreen to actually function.
+
+// Need summary up until "Admin Product List"
