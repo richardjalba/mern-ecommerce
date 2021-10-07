@@ -297,3 +297,7 @@ In the OrderScreen, I bring in axios and a PayPal sdk script. The sdk script is 
 **react-paypal-button-v2** is imported into the OrderScreen and shows in the frontend when the order is not paid. This takes in the amount to be paid and takes in a success handler.
 
 I create successPaymentHandler in the OrderScreen file... I test out the order payment processing via the dummy accounts paypal provides. Success.
+
+Now I want to show the orders on the ProfileScreen. So first I need to go to the orderController to add a GET route to access the orders to the user that is logged in. The route is added to orderRoutes. I test it in Postman - Success.
+
+Then I add this to the Constants, Reducer, Action, bring the action in the ProfileScreen, which I build out even more to show the order information, and call it to bring it onto the state.
