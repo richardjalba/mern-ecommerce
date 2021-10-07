@@ -5,6 +5,10 @@ This ecommerce web app demonstrates my ability using the MERN stack.
 EMAIL: admin@example.com
 PASSWORD: 123456
 
+PAYPAL
+EMAIL: sb-43mghc8052923@personal.example.com
+PASSWORD: N[8wM0u$
+
 **Here is where I will document my efforts in building this ecommerce app.**
 
 First I create the Header and Footer components to bring into the App. I'll also be using bootswatch for a free bootstrap theme.
