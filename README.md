@@ -289,3 +289,11 @@ Now we're able to fetch the order and send it through the state, I'll build out 
 Before bringing in PayPal and using their api, I need to make sure I can get an order to update to being paid in the database.
 
 In the orderController, I add updateOrderToPaid. Then in orderRoutes, I add a route for a PUT request. Then in the frontend, I fix up the order pay CONSTANTS, Action, and Reducer. Which I bring into store.js.
+
+I get the api I need from paypal's website and insert it into my env file. Then I add the GET route in my server.js file.
+
+In the OrderScreen, I bring in axios and a PayPal sdk script. The sdk script is utilized within a useEffect.
+
+**react-paypal-button-v2** is imported into the OrderScreen and shows in the frontend when the order is not paid. This takes in the amount to be paid and takes in a success handler.
+
+I create successPaymentHandler in the OrderScreen file... I test out the order payment processing via the dummy accounts paypal provides. Success.
