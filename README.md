@@ -345,7 +345,7 @@ Next I create the ProductEditScreen. Based on the UserEditScreen with appropriat
 
 These product routes get added to App.js.
 
-**Multer** is middleware used for uploading files. 
+**Multer** is used for uploading files. 
 
 The documentation was confusing and the syntax was kinda weird. But I'm implementing it for product functionality.
 
@@ -358,4 +358,28 @@ The server.js file and ProductEditScreen are modified.
 .....
 
 
+**Morgan** is a logger that helps create an endpoint to log to review product.
 
+Morgan is passed in as middleware, which is utilized in the server.js file.
+
+createNewReview is added to productController.js and given all typical redux code in their appropriate file locations.
+
+The review functionality and form is added to the ProductScreen state.
+
+.....
+
+SearchBar component is created and added to the Header via react-router-dom render props so we can have access to the history. The search route is added to App.js.
+
+productController is getProducts to fetch the products that match the keyword in the SearchBar.
+
+.....
+
+For the carousel on the top of the page. Modify the productController to GET top rated products. 
+
+Top Review Product given all typical redux code in their appropriate file locations.
+
+ProductCarousel component created.
+
+.......
+
+FIN
