@@ -330,3 +330,32 @@ Now I want to GET a user to show on screen and UPDATE. So I create getUserById i
 Now I'm creating the UserEditScreen. Based on the RegisterScreen, except with the appropriate logic.
 
 I make a userUpdate constant, reducer, etc, to get the UserEditScreen to actually function.
+
+.....
+
+Now I want to manage products and create ProductListScreen. Based on UserListScreen with appropriate modifications. Then I add this to App.js
+
+Next I want to add the product delete functionality. So I start at the productController to add  deleteProduct and add that to productRoutes. I test out the DELETE api on Postman and it works. Followed by making the changes to the productConstants, productReducers, and productActions.
+
+Repeat the previous passage for create product POST and update product PUT functionality.
+
+I modify the ProductListScreen to include the create, delete, and modify buttons and handlers. 
+
+Next I create the ProductEditScreen. Based on the UserEditScreen with appropriate modifications.
+
+These product routes get added to App.js.
+
+**Multer** is middleware used for uploading files. 
+
+The documentation was confusing and the syntax was kinda weird. But I'm implementing it for product functionality.
+
+NOTE: The image must be JPG, JPEG or PNG.
+
+All files are uploaded to a folder called uploads. The route is put into updateRoutes.js. 
+
+The server.js file and ProductEditScreen are modified.
+
+.....
+
+
+
